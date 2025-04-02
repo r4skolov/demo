@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/app.css">
+	<script>/*! @formatter:off modernizr 3.6.0 (Custom Build) | MIT https://modernizr.com/download/?-overflowscrolling-webp-setclasses !*/!function(e,n,t){function r(e,n){return typeof e===n}function o(){var e,n,t,o,i,s,a;for(var l in _)if(_.hasOwnProperty(l)){if(e=[],n=_[l],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(o=r(n.fn,"function")?n.fn():n.fn,i=0;i<e.length;i++)s=e[i],a=s.split("."),1===a.length?Modernizr[a[0]]=o:(!Modernizr[a[0]]||Modernizr[a[0]]instanceof Boolean||(Modernizr[a[0]]=new Boolean(Modernizr[a[0]])),Modernizr[a[0]][a[1]]=o),w.push((o?"":"no-")+a.join("-"))}}function i(e){var n=S.className,t=Modernizr._config.classPrefix||"";if(B&&(n=n.baseVal),Modernizr._config.enableJSClass){var r=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(r,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),B?S.className.baseVal=n:S.className=n)}function s(e,n){if("object"==typeof e)for(var t in e)b(e,t)&&s(t,e[t]);else{e=e.toLowerCase();var r=e.split("."),o=Modernizr[r[0]];if(2==r.length&&(o=o[r[1]]),"undefined"!=typeof o)return Modernizr;n="function"==typeof n?n():n,1==r.length?Modernizr[r[0]]=n:(!Modernizr[r[0]]||Modernizr[r[0]]instanceof Boolean||(Modernizr[r[0]]=new Boolean(Modernizr[r[0]])),Modernizr[r[0]][r[1]]=n),i([(n&&0!=n?"":"no-")+r.join("-")]),Modernizr._trigger(e,n)}return Modernizr}function a(e,n){return!!~(""+e).indexOf(n)}function l(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):B?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function A(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function u(e,n){return function(){return e.apply(n,arguments)}}function f(e,n,t){var o;for(var i in e)if(e[i]in n)return t===!1?e[i]:(o=n[e[i]],r(o,"function")?u(o,t||n):o);return!1}function c(n,t,r){var o;if("getComputedStyle"in e){o=getComputedStyle.call(e,n,t);var i=e.console;if(null!==o)r&&(o=o.getPropertyValue(r));else if(i){var s=i.error?"error":"log";i[s].call(i,"getComputedStyle returning null, its possible modernizr test results are inaccurate")}}else o=!t&&n.currentStyle&&n.currentStyle[r];return o}function p(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function d(){var e=n.body;return e||(e=l(B?"svg":"body"),e.fake=!0),e}function m(e,t,r,o){var i,s,a,A,u="modernizr",f=l("div"),c=d();if(parseInt(r,10))for(;r--;)a=l("div"),a.id=o?o[r]:u+(r+1),f.appendChild(a);return i=l("style"),i.type="text/css",i.id="s"+u,(c.fake?c:f).appendChild(i),c.appendChild(f),i.styleSheet?i.styleSheet.cssText=e:i.appendChild(n.createTextNode(e)),f.id=u,c.fake&&(c.style.background="",c.style.overflow="hidden",A=S.style.overflow,S.style.overflow="hidden",S.appendChild(c)),s=t(f,e),c.fake?(c.parentNode.removeChild(c),S.style.overflow=A,S.offsetHeight):f.parentNode.removeChild(f),!!s}function g(n,r){var o=n.length;if("CSS"in e&&"supports"in e.CSS){for(;o--;)if(e.CSS.supports(p(n[o]),r))return!0;return!1}if("CSSSupportsRule"in e){for(var i=[];o--;)i.push("("+p(n[o])+":"+r+")");return i=i.join(" or "),m("@supports ("+i+") { #modernizr { position: absolute; } }",function(e){return"absolute"==c(e,null,"position")})}return t}function h(e,n,o,i){function s(){f&&(delete U.style,delete U.modElem)}if(i=r(i,"undefined")?!1:i,!r(o,"undefined")){var u=g(e,o);if(!r(u,"undefined"))return u}for(var f,c,p,d,m,h=["modernizr","tspan","samp"];!U.style&&h.length;)f=!0,U.modElem=l(h.shift()),U.style=U.modElem.style;for(p=e.length,c=0;p>c;c++)if(d=e[c],m=U.style[d],a(d,"-")&&(d=A(d)),U.style[d]!==t){if(i||r(o,"undefined"))return s(),"pfx"==n?d:!0;try{U.style[d]=o}catch(v){}if(U.style[d]!=m)return s(),"pfx"==n?d:!0}return s(),!1}function v(e,n,t,o,i){var s=e.charAt(0).toUpperCase()+e.slice(1),a=(e+" "+x.join(s+" ")+s).split(" ");return r(n,"string")||r(n,"undefined")?h(a,n,o,i):(a=(e+" "+E.join(s+" ")+s).split(" "),f(a,n,t))}function y(e,n,r){return v(e,t,t,n,r)}var w=[],_=[],C={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){_.push({name:e,fn:n,options:t})},addAsyncTest:function(e){_.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=C,Modernizr=new Modernizr;var b,S=n.documentElement,B="svg"===S.nodeName.toLowerCase();!function(){var e={}.hasOwnProperty;b=r(e,"undefined")||r(e.call,"undefined")?function(e,n){return n in e&&r(e.constructor.prototype[n],"undefined")}:function(n,t){return e.call(n,t)}}(),C._l={},C.on=function(e,n){this._l[e]||(this._l[e]=[]),this._l[e].push(n),Modernizr.hasOwnProperty(e)&&setTimeout(function(){Modernizr._trigger(e,Modernizr[e])},0)},C._trigger=function(e,n){if(this._l[e]){var t=this._l[e];setTimeout(function(){var e,r;for(e=0;e<t.length;e++)(r=t[e])(n)},0),delete this._l[e]}},Modernizr._q.push(function(){C.addTest=s}),Modernizr.addAsyncTest(function(){function e(e,n,t){function r(n){var r=n&&"load"===n.type?1==o.width:!1,i="webp"===e;s(e,i&&r?new Boolean(r):r),t&&t(n)}var o=new Image;o.onerror=r,o.onload=r,o.src=n}var n=[{uri:"data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",name:"webp"},{uri:"data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",name:"webp.alpha"},{uri:"data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",name:"webp.animation"},{uri:"data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",name:"webp.lossless"}],t=n.shift();e(t.name,t.uri,function(t){if(t&&"load"===t.type)for(var r=0;r<n.length;r++)e(n[r].name,n[r].uri)})});var Q="Moz O ms Webkit",x=C._config.usePrefixes?Q.split(" "):[];C._cssomPrefixes=x;var E=C._config.usePrefixes?Q.toLowerCase().split(" "):[];C._domPrefixes=E;var T={elem:l("modernizr")};Modernizr._q.push(function(){delete T.elem});var U={style:T.elem.style};Modernizr._q.unshift(function(){delete U.style}),C.testAllProps=v,C.testAllProps=y,Modernizr.addTest("overflowscrolling",y("overflowScrolling","touch",!0)),o(),i(w),delete C.addTest,delete C.addAsyncTest;for(var P=0;P<Modernizr._q.length;P++)Modernizr._q[P]();e.Modernizr=Modernizr}(window,document);/*! @formatter:on */</script>
+</head>
+
+<body>
+	<div class="page-wrapper">
+		<div class="hero">
+			<div class="swiper swiper--hero">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<picture>
+							<source media="(min-width: 1439px)" srcset="images/hero/hero.webp 1x, images/hero/hero@2x.webp 1.3x" type="image/webp">
+							<source media="(min-width:1439px)" srcset="images/hero/hero.jpg 1x, images/hero/hero@2x.jpg 1.3x" type="image/jpg">
+							<source media="(min-width: 767px)" srcset="images/hero/hero-tablet.webp 1x, images/hero/hero-tablet@2x.webp 1.3x" type="image/webp">
+							<source media="(min-width: 767px)" srcset="images/hero/hero-tablet.jpg 1x, images/hero/hero-tablet@2x.jpg 1.3x" type="image/jpg">
+							<source srcset="images/hero/hero-mob.webp 1x, images/hero/hero-mob@2x.webp 1.3x" type="image/webp">
+							<source srcset="images/hero/hero-mob.jpg 1x, images/hero/hero-mob@2x.jpg 1.3x" type="image/jpg">
+							<img src="images/hero/hero-mob.jpg" alt="" loading="lazy">
+						</picture>
+					</div>
+					<div class="swiper-slide">
+						<picture>
+							<source media="(min-width: 1439px)" srcset="images/hero/hero-2.webp 1x, images/hero/hero-2@2x.webp 1.3x" type="image/webp">
+							<source media="(min-width:1439px)" srcset="images/hero/hero-2.jpg 1x, images/hero/hero-2@2x.jpg 1.3x" type="image/jpg">
+							<source media="(min-width: 767px)" srcset="images/hero/hero-2-tablet.webp 1x, images/hero/hero-2-tablet@2x.webp 1.3x" type="image/webp">
+							<source media="(min-width: 767px)" srcset="images/hero/hero-2-tablet.jpg 1x, images/hero/hero-2-tablet@2x.jpg 1.3x" type="image/jpg">
+							<source srcset="images/hero/hero-2-mob.webp 1x, images/hero/hero-2-mob@2x.webp 1.3x" type="image/webp">
+							<source srcset="images/hero/hero-2-mob.jpg 1x, images/hero/hero-2-mob@2x.jpg 1.3x" type="image/jpg">
+							<img src="images/hero/hero-2-mob.jpg" alt="" loading="lazy">
+						</picture>
+					</div>
+					<div class="swiper-slide">
+						<picture>
+							<source media="(min-width: 1439px)" srcset="images/hero/hero-3.webp 1x, images/hero/hero-3@2x.webp 1.3x" type="image/webp">
+							<source media="(min-width:1439px)" srcset="images/hero/hero-3.jpg 1x, images/hero/hero-3@2x.jpg 1.3x" type="image/jpg">
+							<source media="(min-width: 767px)" srcset="images/hero/hero-3-tablet.webp 1x, images/hero/hero-3-tablet@2x.webp 1.3x" type="image/webp">
+							<source media="(min-width: 767px)" srcset="images/hero/hero-3-tablet.jpg 1x, images/hero/hero-3-tablet@2x.jpg 1.3x" type="image/jpg">
+							<source srcset="images/hero/hero-3-mob.webp 1x, images/hero/hero-3-mob@2x.webp 1.3x" type="image/webp">
+							<source srcset="images/hero/hero-3-mob.jpg 1x, images/hero/hero-3-mob@2x.jpg 1.3x" type="image/jpg">
+							<img src="images/hero/hero-3-mob.jpg" alt="" loading="lazy">
+						</picture>
+					</div>
+				</div>
+			</div>
+			<div class="hero__main">
+				<div class="hero__container">
+					<h1 class="hero__title">
+						Оптовым клиентам —
+						самые выгодные цены
+					</h1>
+					<button type="button" class="b-btn b-btn--primary" data-modal-open="app">
+						Оставить заявку
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="clients">
+			<div class="container">
+				<h2 class="clients__title section-title">
+					<span>Более 15 лет</span> эффективно работаем с клиентами
+				</h2>
+				<div class="clients__grid">
+					<div class="clients-item">
+						<div class="clients-item__icon">
+							<picture>
+								<source srcset="images/clients/clients-1.webp 1x" type="image/webp">
+								<img src="images/clients/clients-1.png" width="35" height="35" alt="" loading="lazy">
+							</picture>
+						</div>
+						<div class="clients-item__name">
+							гарантия до 5 лет
+						</div>
+					</div>
+					<div class="clients-item">
+						<div class="clients-item__icon">
+							<picture>
+								<source srcset="images/clients/clients-2.webp 1x" type="image/webp">
+								<img src="images/clients/clients-2.png" width="35" height="35" alt="" loading="lazy">
+							</picture>
+						</div>
+						<div class="clients-item__name">
+							цены от производителя
+						</div>
+					</div>
+					<div class="clients-item">
+						<div class="clients-item__icon">
+							<picture>
+								<source srcset="images/clients/clients-3.webp 1x" type="image/webp">
+								<img src="images/clients/clients-3.png" width="35" height="35" alt="" loading="lazy">
+							</picture>
+						</div>
+						<div class="clients-item__name">
+							заводское сертифицированное
+							оборудование
+						</div>
+					</div>
+					<div class="clients-item">
+						<div class="clients-item__icon">
+							<picture>
+								<source srcset="images/clients/clients-4.webp 1x" type="image/webp">
+								<img src="images/clients/clients-4.png" width="35" height="35" alt="" loading="lazy">
+							</picture>
+						</div>
+						<div class="clients-item__name">
+							высокое качество продукции
+						</div>
+					</div>
+					<div class="clients-item">
+						<div class="clients-item__icon">
+							<picture>
+								<source srcset="images/clients/clients-5.webp 1x" type="image/webp">
+								<img src="images/clients/clients-5.png" width="35" height="35" alt="" loading="lazy">
+							</picture>
+						</div>
+						<div class="clients-item__name">
+							быстрая доставка
+						</div>
+					</div>
+					<div class="clients-item">
+						<div class="clients-item__icon">
+							<picture>
+								<source srcset="images/clients/clients-6.webp 1x" type="image/webp">
+								<img src="images/clients/clients-6.png" width="35" height="35" alt="" loading="lazy">
+							</picture>
+						</div>
+						<div class="clients-item__name">
+							большие складские объемы
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="help section--offset">
+			<div class="container">
+				<h2 class="help__title section-title">
+					Поможем подобрать оборудование<br>
+					для любых целей
+				</h2>
+				<div class="help__wrapper">
+					<div class="help__buttons">
+						<button type="button" class="help__btn active">
+							Дизайнерские решения
+						</button>
+						<button type="button" class="help__btn">
+							Офисные помещения
+						</button>
+						<button type="button" class="help__btn">
+							Коммерческие помещения
+						</button>
+						<button type="button" class="help__btn">
+							Фасадное освещение
+						</button>
+						<button type="button" class="help__btn">
+							Уличное освещение
+						</button>
+						<button type="button" class="help__btn">
+							Жилые помещения
+						</button>
+					</div>
+					<div class="help__swiper">
+						<div class="swiper swiper--help">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<picture>
+										<source srcset="images/help/help-1.webp 1x, images/help/help-1@2x.webp 1.3x" type="image/webp">
+										<source srcset="images/help/help-1.jpg 1x, images/help/help-1@2x.jpg 1.3x" type="image/jpg">
+										<img src="images/help/help-1.jpg" width="360" height="409" alt="" loading="lazy">
+									</picture>
+								</div>
+								<div class="swiper-slide">
+									<picture>
+										<source srcset="images/help/help-2.webp 1x, images/help/help-2@2x.webp 1.3x" type="image/webp">
+										<source srcset="images/help/help-2.jpg 1x, images/help/help-2@2x.jpg 1.3x" type="image/jpg">
+										<img src="images/help/help-2.jpg" width="360" height="409" alt="" loading="lazy">
+									</picture>
+								</div>
+								<div class="swiper-slide">
+									<picture>
+										<source srcset="images/help/help-3.webp 1x, images/help/help-3@2x.webp 1.3x" type="image/webp">
+										<source srcset="images/help/help-3.jpg 1x, images/help/help-3@2x.jpg 1.3x" type="image/jpg">
+										<img src="images/help/help-3.jpg" width="360" height="409" alt="" loading="lazy">
+									</picture>
+								</div>
+								<div class="swiper-slide">
+									<picture>
+										<source srcset="images/help/help-4.webp 1x, images/help/help-4@2x.webp 1.3x" type="image/webp">
+										<source srcset="images/help/help-4.jpg 1x, images/help/help-4@2x.jpg 1.3x" type="image/jpg">
+										<img src="images/help/help-4.jpg" width="360" height="409" alt="" loading="lazy">
+									</picture>
+								</div>
+								<div class="swiper-slide">
+									<picture>
+										<source srcset="images/help/help-5.webp 1x, images/help/help-5@2x.webp 1.3x" type="image/webp">
+										<source srcset="images/help/help-5.jpg 1x, images/help/help-5@2x.jpg 1.3x" type="image/jpg">
+										<img src="images/help/help-5.jpg" width="360" height="409" alt="" loading="lazy">
+									</picture>
+								</div>
+								<div class="swiper-slide">
+									<picture>
+										<source srcset="images/help/help-6.webp 1x, images/help/help-6@2x.webp 1.3x" type="image/webp">
+										<source srcset="images/help/help-6.jpg 1x, images/help/help-6@2x.jpg 1.3x" type="image/jpg">
+										<img src="images/help/help-6.jpg" width="360" height="409" alt="" loading="lazy">
+									</picture>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="advantages section--offset">
+			<div class="container">
+				<h2 class="advantages__title section-title">
+					Выбирая нас, вы получаете:
+				</h2>
+				<div class="advantages__grid">
+					<div class="advantages__item">
+						<div class="advantages__icon">
+							<picture>
+								<source srcset="images/advantages/adv-1.webp 1x" type="image/webp">
+								<img src="images/advantages/adv-1.png" width="100" height="100" alt="" loading="lazy">
+							</picture>
+						</div>
+						<div class="advantages__text">
+							Подбор современного
+							оборудования
+						</div>
+					</div>
+					<div class="advantages__item">
+						<div class="advantages__icon">
+							<picture>
+								<source srcset="images/advantages/adv-2.webp 1x" type="image/webp">
+								<img src="images/advantages/adv-2.png" width="100" height="100" alt="" loading="lazy">
+							</picture>
+						</div>
+						<div class="advantages__text">
+							Специальные
+							предложения и скидки
+						</div>
+					</div>
+					<div class="advantages__item">
+						<div class="advantages__icon">
+							<picture>
+								<source srcset="images/advantages/adv-3.webp 1x" type="image/webp">
+								<img src="images/advantages/adv-3.png" width="100" height="100" alt="" loading="lazy">
+							</picture>
+						</div>
+						<div class="advantages__text">
+							Надежный и качественный
+							монтаж
+						</div>
+					</div>
+					<div class="advantages__item">
+						<div class="advantages__icon">
+							<picture>
+								<source srcset="images/advantages/adv-4.webp 1x" type="image/webp">
+								<img src="images/advantages/adv-4.png" width="100" height="100" alt="" loading="lazy">
+							</picture>
+						</div>
+						<div class="advantages__text">
+							Гарантию на оборудование
+							и монтаж
+						</div>
+					</div>
+				</div>
+				<button type="button" class="b-btn b-btn--primary" data-modal-open="feedback">
+					Стать партнером
+				</button>
+			</div>
+		</div>
+		<div class="products section--offset">
+			<div class="container">
+				<h2 class="products__title section-title">
+					Широкий выбор решений для освещения
+				</h2>
+				<div class="swiper swiper--product">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="product-item">
+								<div class="product-item__img">
+									<picture class="default">
+										<source media="(min-width:1439px)" srcset="images/products/products-1-desc.webp 1x, images/products/products-1-desc@2x.webp 1.3x" type="image/webp">
+										<source media="(min-width:1439px)" srcset="images/products/products-1-desc.jpg 1x, images/products/products-1-desc@2x.jpg 1.3x" type="image/jpg">
+										<source srcset="images/products/products-1.webp 1x, images/products/products-1@2x.webp 1.3x" type="image/webp">
+										<source srcset="images/products/products-1.jpg 1x, images/products/products-1@2x.jpg 1.3x" type="image/jpg">
+										<img src="images/products/products-1.jpg" width="230" height="230" alt="" loading="lazy">
+									</picture>
+									<picture class="hover">
+										<source media="(min-width:1439px)" srcset="images/products/products-1-desc-hover.webp 1x, images/products/products-1-desc-hover@2x.webp 1.3x" type="image/webp">
+										<source media="(min-width:1439px)" srcset="images/products/products-1-desc-hover.jpg 1x, images/products/products-1-desc-hover@2x.jpg 1.3x" type="image/jpg">
+										<img src="images/products/products-1-hover.jpg" width="230" height="230" alt="" loading="lazy">
+									</picture>
+								</div>
+								<div class="product-item__name">
+									Светодиодные ленты
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="product-item">
+								<div class="product-item__img">
+									<picture class="default">
+										<source srcset="images/products/products-2.webp 1x, images/products/products-2@2x.webp 1.3x" type="image/webp">
+										<source srcset="images/products/products-2.jpg 1x, images/products/products-2@2x.jpg 1.3x" type="image/jpg">
+										<img src="images/products/products-2.jpg" width="230" height="230" alt="" loading="lazy">
+									</picture>
+									<picture class="hover">
+										<source srcset="images/products/products-1-hover.webp 1x, images/products/products-1-hover@2x.webp 1.3x" type="image/webp">
+										<source srcset="images/products/products-1-hover.jpg 1x, images/products/products-1-hover@2x.jpg 1.3x" type="image/jpg">
+										<img src="images/products/products-1-hover.jpg" width="230" height="230" alt="" loading="lazy">
+									</picture>
+								</div>
+								<div class="product-item__name">
+									Гибкий неон
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="product-item">
+								<div class="product-item__img">
+									<picture class="default">
+										<source srcset="images/products/products-6.webp 1x, images/products/products-6@2x.webp 1.3x" type="image/webp">
+										<source srcset="images/products/products-6.jpg 1x, images/products/products-6@2x.jpg 1.3x" type="image/jpg">
+										<img src="images/products/products-6.jpg" width="230" height="230" alt="" loading="lazy">
+									</picture>
+									<picture class="hover">
+										<source srcset="images/products/products-6-hover.webp 1x, images/products/products-6-hover@2x.webp 1.3x" type="image/webp">
+										<source srcset="images/products/products-6-hover.jpg 1x, images/products/products-6-hover@2x.jpg 1.3x" type="image/jpg">
+										<img src="images/products/products-6-hover.jpg" width="230" height="230" alt="" loading="lazy">
+									</picture>
+								</div>
+								<div class="product-item__name">
+									Блоки питания
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="product-item">
+								<div class="product-item__img">
+									<picture class="default">
+										<source srcset="images/products/products-3.webp 1x, images/products/products-3@2x.webp 1.3x" type="image/webp">
+										<source srcset="images/products/products-3.jpg 1x, images/products/products-3@2x.jpg 1.3x" type="image/jpg">
+										<img src="images/products/products-3.jpg" width="230" height="230" alt="" loading="lazy">
+									</picture>
+									<picture class="hover">
+										<source srcset="images/products/products-3-hover.webp 1x, images/products/products-3-hover@2x.webp 1.3x" type="image/webp">
+										<source srcset="images/products/products-3-hover.jpg 1x, images/products/products-3-hover@2x.jpg 1.3x" type="image/jpg">
+										<img src="images/products/products-3-hover.jpg" width="230" height="230" alt="" loading="lazy">
+									</picture>
+								</div>
+								<div class="product-item__name">
+									Алюминиевый
+									профиль
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="product-item">
+								<div class="product-item__img">
+									<picture class="default">
+										<source srcset="images/products/products-4.webp 1x, images/products/products-4@2x.webp 1.3x" type="image/webp">
+										<source srcset="images/products/products-4.jpg 1x, images/products/products-4@2x.jpg 1.3x" type="image/jpg">
+										<img src="images/products/products-4.jpg" width="230" height="230" alt="" loading="lazy">
+									</picture>
+									<picture class="hover">
+										<source srcset="images/products/products-4-hover.webp 1x, images/products/products-4-hover@2x.webp 1.3x" type="image/webp">
+										<source srcset="images/products/products-4-hover.jpg 1x, images/products/products-4-hover@2x.jpg 1.3x" type="image/jpg">
+										<img src="images/products/products-4-hover.jpg" width="230" height="230" alt="" loading="lazy">
+									</picture>
+								</div>
+								<div class="product-item__name">
+									Светильники
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="product-item">
+								<div class="product-item__img">
+									<picture class="default">
+										<source srcset="images/products/products-5.webp 1x, images/products/products-5@2x.webp 1.3x" type="image/webp">
+										<source srcset="images/products/products-5.jpg 1x, images/products/products-5@2x.jpg 1.3x" type="image/jpg">
+										<img src="images/products/products-5.jpg" width="230" height="230" alt="" loading="lazy">
+									</picture>
+									<picture class="hover">
+										<source srcset="images/products/products-5-hover.webp 1x, images/products/products-5-hover@2x.webp 1.3x" type="image/webp">
+										<source srcset="images/products/products-5-hover.jpg 1x, images/products/products-5-hover@2x.jpg 1.3x" type="image/jpg">
+										<img src="images/products/products-5-hover.jpg" width="230" height="230" alt="" loading="lazy">
+									</picture>
+								</div>
+								<div class="product-item__name">
+									Уличное освещение
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="product-item">
+								<div class="product-item__img">
+									<picture>
+										<source media="(min-width:1439px)" srcset="images/products/products-7-desc.webp 1x, images/products/products-7-desc@2x.webp 1.3x" type="image/webp">
+										<source media="(min-width:1439px)" srcset="images/products/products-7-desc.jpg 1x, images/products/products-7-desc@2x.jpg 1.3x" type="image/jpg">
+										<source srcset="images/products/products-7.webp 1x, images/products/products-7@2x.webp 1.3x" type="image/webp">
+										<source srcset="images/products/products-7.jpg 1x, images/products/products-7@2x.jpg 1.3x" type="image/jpg">
+										<img src="images/products/products-7.jpg" width="230" height="230" alt="" loading="lazy">
+									</picture>
+									<picture class="hover">
+										<source srcset="images/products/products-7-desc-hover.webp 1x, images/products/products-7-desc-hover@2x.webp 1.3x" type="image/webp">
+										<source srcset="images/products/products-7-desc-hover.jpg 1x, images/products/products-7-desc-hover@2x.jpg 1.3x" type="image/jpg">
+										<img src="images/products/products-7-desc-hover.jpg" width="230" height="230" alt="" loading="lazy">
+									</picture>
+								</div>
+								<div class="product-item__name">
+									Светодиодные гирлянды
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button type="button" class="b-btn b-btn--primary" data-modal-open="feedback">
+					Получить каталог
+				</button>
+			</div>
+		</div>
+		<div class="feedback section--offset">
+			<div class="container">
+				<div class="feedback__wrapper">
+					<div class="feedback__left">
+						<h2 class="feedback__title section-title">Обратная связь</h2>
+						<div class="feedback__text">
+							Оставьте свои контакты, и мы свяжемся с Вами
+						</div>
+						<form action="#" class="form form--feedback">
+							<div class="form__grid">
+								<div class="form__row">
+									<input type="text" class="form__input" placeholder="Имя" id="name">
+								</div>
+								<div class="form__row">
+									<input type="text" class="form__input" placeholder="Телефон" id="phone">
+								</div>
+								<div class="form__row">
+									<input type="text" class="form__input" placeholder="e-mail" name="email">
+								</div>
+							</div>
+							<button type="button" class="b-btn b-btn--primary">Оставить заявку</button>
+						</form>
+						<div class="feedback__wrap">
+							<div class="feedback__text">
+								Или самостоятельно обратитесь к нам:
+							</div>
+							<ul class="socials list-reset">
+								<li class="socials__item">
+									<a href="tel:+79626804508" class="socials__link">
+										<img src="images/socials/phone.png" width="35" height="35" alt="" loading="lazy">
+										<span>+7 (962) 680-45-08</span>
+									</a>
+								</li>
+
+								<li class="socials__item">
+									<a href="#" class="socials__link">
+										<img src="images/socials/wa.png" width="35" height="35" alt="" loading="lazy">
+										<span>Whatsapp</span>
+									</a>
+								</li>
+								<li class="socials__item">
+									<a href="mailto:Spb.ledpremium@yandex.ru" class="socials__link">
+										<img src="images/socials/mail.png" width="35" height="35" alt="" loading="lazy">
+										<span>Spb.ledpremium@yandex.ru</span>
+									</a>
+								</li>
+								<li class="socials__item">
+									<a href="#" class="socials__link">
+										<img src="images/socials/tg.png" width="35" height="35" alt="" loading="lazy">
+										<span>Telegram</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="feedback__img">
+						<picture>
+							<source media="(min-width:767px)" srcset="images/feedback/feedback.webp 1x, images/feedback/feedback@2x.webp 1.3x" type="image/webp">
+							<source media="(min-width:767px)" srcset="images/feedback/feedback.png 1x, images/feedback/feedback@2x.jpg 1.3x" type="image/jpg">
+							<source srcset="images/feedback/feedback-mob.webp 1x, images/feedback/feedback-mob@2x.webp 1.3x" type="image/webp">
+							<source srcset="images/feedback/feedback-mob.png 1x, images/feedback/feedback-mob@2x.jpg 1.3x" type="image/jpg">
+							<img src="images/feedback/feedback-mob.jpg" alt="" loading="lazy">
+						</picture>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="feedback" class="modal" aria-hidden="false">
+		<div tabindex="-1" class="modal__overlay" data-micromodal-close="">
+			<div role="dialog" class="modal__container">
+				<button type="button" class="modal__close " data-modal-close="feedback">
+					<img src="images/icon/close.png" width="25" height="25" alt="">
+				</button>
+				<div class="modal__wrapper">
+					<div class="form-modal">
+						<div class="form-modal__top">
+							<div class="form-modal__title">
+								Регистрация
+							</div>
+							<div class="form-modal__text">
+								Станьте нашим партнером и получите доступ к оптовым ценам
+							</div>
+							<div class="form-modal__subtext">
+								*Регистрация занимаетот 2 часов. После ее завершения наши менеджеры свяжутся с Вами.
+							</div>
+						</div>
+						<form action="#" class="form form--modal">
+							<div class="form__wrapper">
+								<div class="form__row">
+									<input type="text" class="form__input" placeholder="Логин" id="login">
+								</div>
+								<div class="form__row">
+									<input type="text" class="form__input" placeholder="Телефон" id="form-phone">
+								</div>
+								<div class="form__row">
+									<input type="text" class="form__input" placeholder="e-mail" id="form-email">
+								</div>
+								<div class="form__row">
+									<input type="password" class="form__input" placeholder="Пароль" id="form-password">
+								</div>
+								<div class="form__row">
+									<input type="password" class="form__input" placeholder="Повтор пароля" id="form-password-repeat">
+								</div>
+							</div>
+							<div class="privacy-policy">
+								Отправляя запрос, Вы соглашаетесь с <a href="#">политикой конфиденциальности.</a>
+							</div>
+							<div class="checkbox">
+								<div class="checkbox-wrap">
+									<label for="checkbox" class="checkbox-style">
+										<input type="checkbox" name="checkbox" id="checkbox">
+										<span></span>
+									</label>
+									<div class="checkbox-wrap__text">
+										Подписаться на новости
+									</div>
+								</div>
+							</div>
+							<button type="button" class="b-btn b-btn--primary" data-modal-open="reg">
+								Отправить запрос
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="modal__bg" aria-hidden="true" data-modal-close="feedback"></div>
+		</div>
+	</div>
+
+	<div id="app" class="modal" aria-hidden="false">
+		<div tabindex="-1" class="modal__overlay" data-micromodal-close="">
+			<div role="dialog" class="modal__container modal__container--system">
+				<button type="button" class="modal__close " data-modal-close="app">
+					<img src="images/icon/close.png" width="25" height="25" alt="">
+				</button>
+				<div class="modal__wrapper">
+					<div class="form-modal">
+						<div class="form-modal__top">
+							<div class="form-modal__title">
+								Спасибо за заявку!
+							</div>
+							<div class="form-modal__text">
+								Наш менеджер свяжется с Вами в ближайшее время.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal__bg" aria-hidden="true" data-modal-close="app"></div>
+		</div>
+	</div>
+	<div id="reg" class="modal" aria-hidden="false">
+		<div tabindex="-1" class="modal__overlay" data-micromodal-close="">
+			<div role="dialog" class="modal__container modal__container--system">
+				<button type="button" class="modal__close " data-modal-close="reg">
+					<img src="images/icon/close.png" width="25" height="25" alt="">
+				</button>
+				<div class="modal__wrapper">
+					<div class="form-modal">
+						<div class="form-modal__top">
+							<div class="form-modal__title">
+								Спасибо за регистрацию!
+							</div>
+							<div class="form-modal__text">
+								Обработка информации занимает от 2 часов.<br>
+								После завершения регистрации наши менеджеры свяжутся с Вами.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal__bg" aria-hidden="true" data-modal-close="reg"></div>
+		</div>
+	</div>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/app.min.js"></script>
+
+	<script>
+		const swiperMain = new Swiper('.swiper--hero', {
+			loop          : false,
+			slidesPerView : 'auto',
+			autoplay      : {
+				delay : 2000,
+			},
+			effect: 'fade',
+			fadeEffect: {
+				crossFade: true
+			},
+		});
+
+
+
+		function helpSlider() {
+			const buttons = document.querySelectorAll('.help__btn');
+
+			const swiperHelp = new Swiper('.swiper--help', {
+				loop: true,
+				slidesPerView: 'auto',
+				autoplay: {
+					delay: 2000,
+					disableOnInteraction: false,
+				},
+				effect: 'fade',
+				fadeEffect: {
+					crossFade: true
+				}
+			});
+
+			swiperHelp.on('slideChange', function () {
+				updateActiveButton(swiperHelp.realIndex ?? swiperHelp.activeIndex);
+			});
+
+			buttons.forEach((button, index) => {
+				button.addEventListener('click', () => {
+					swiperHelp.slideToLoop(index);
+					updateActiveButton(index);
+				});
+			});
+
+
+			function updateActiveButton(activeIndex) {
+				buttons.forEach((button, index) => {
+					button.classList.toggle('active', index === activeIndex);
+				});
+			}
+
+
+			updateActiveButton(swiperHelp.realIndex ?? swiperHelp.activeIndex);
+		}
+		helpSlider();
+
+		const swiperProduct = new Swiper(".swiper--product", {
+			slidesPerView: 'auto',
+			freeMode: true,
+			breakpoints         : {
+				1390 : {
+					allowTouchMove : false,
+				},
+			},
+		});
+	</script>
+</body>
+
+</html>
