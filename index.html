@@ -441,13 +441,22 @@
 						<form action="#" class="form form--feedback">
 							<div class="form__grid">
 								<div class="form__row">
-									<input type="text" class="form__input" placeholder="Имя" id="name">
+									<label for="name">
+										<input type="text" class="form__input" placeholder="" id="name">
+										<span class="form__name">Имя</span>
+									</label>
 								</div>
 								<div class="form__row">
-									<input type="text" class="form__input" placeholder="Телефон" id="phone">
+									<label for="phone">
+										<input type="text" class="form__input" placeholder="" id="phone">
+										<span class="form__name">Телефон</span>
+									</label>
 								</div>
 								<div class="form__row">
-									<input type="text" class="form__input" placeholder="e-mail" name="email">
+									<label for="email">
+										<input type="text" class="form__input" placeholder="" id="email">
+										<span class="form__name">Телефон</span>
+									</label>
 								</div>
 							</div>
 							<button type="button" class="b-btn b-btn--primary">Оставить заявку</button>
@@ -520,32 +529,49 @@
 						<form action="#" class="form form--modal">
 							<div class="form__wrapper">
 								<div class="form__row">
-									<input type="text" class="form__input" placeholder="Логин" id="login">
-								</div>
-								<div class="form__row">
-									<input type="text" class="form__input" placeholder="Телефон" id="form-phone">
-								</div>
-								<div class="form__row">
-									<input type="text" class="form__input" placeholder="e-mail" id="form-email">
-								</div>
-								<div class="form__row">
-									<input type="password" class="form__input" placeholder="Пароль" id="form-password">
-								</div>
-								<div class="form__row">
-									<input type="password" class="form__input" placeholder="Повтор пароля" id="form-password-repeat">
-								</div>
-							</div>
-							<div class="privacy-policy">
-								Отправляя запрос, Вы соглашаетесь с <a href="#">политикой конфиденциальности.</a>
-							</div>
-							<div class="checkbox">
-								<div class="checkbox-wrap">
-									<label for="checkbox" class="checkbox-style">
-										<input type="checkbox" name="checkbox" id="checkbox">
-										<span></span>
+									<label for="modal-name">
+										<input type="text" class="form__input" placeholder="" id="modal-name">
+										<span class="form__name">Имя</span>
 									</label>
-									<div class="checkbox-wrap__text">
-										Подписаться на новости
+								</div>
+								<div class="form__row">
+									<label for="form-phone">
+										<input type="text" class="form__input" placeholder="" id="form-phone">
+										<span class="form__name">Телефон</span>
+									</label>
+								</div>
+								<div class="form__row">
+									<label for="form-email">
+										<input type="text" class="form__input" placeholder="" id="form-email">
+										<span class="form__name">e-mail</span>
+									</label>
+								</div>
+								<div class="form__row">
+									<label for="form-password">
+										<input type="password" class="form__input" placeholder="" id="form-password">
+										<span class="form__name">Пароль</span>
+									</label>
+								</div>
+								<div class="form__row">
+									<label for="form-password-repeat">
+										<input type="password" class="form__input" placeholder="" id="form-password-repeat">
+										<span class="form__name">Повтор пароля</span>
+									</label>
+								</div>
+							</div>
+							<div class="form__wrap">
+								<div class="privacy-policy">
+									Отправляя запрос, Вы соглашаетесь с <a href="#">политикой конфиденциальности.</a>
+								</div>
+								<div class="checkbox">
+									<div class="checkbox-wrap">
+										<label for="checkbox" class="checkbox-style">
+											<input type="checkbox" name="checkbox" id="checkbox">
+											<span></span>
+										</label>
+										<div class="checkbox-wrap__text">
+											Подписаться на новости
+										</div>
 									</div>
 								</div>
 							</div>
