@@ -438,24 +438,24 @@
 						<div class="feedback__text">
 							Оставьте свои контакты, и мы свяжемся с Вами
 						</div>
-						<form action="#" class="form form--feedback">
-							<div class="form__grid">
-								<div class="form__row">
+						<form action="#" class="form-secondary form-secondary--feedback">
+							<div class="form-secondary__grid">
+								<div class="form-secondary__row">
 									<label for="name">
-										<input type="text" class="form__input" placeholder="" id="name">
-										<span class="form__name">Имя</span>
+										<input type="text" class="form-secondary__input" placeholder="" id="name">
+										<span class="form-secondary__name">Имя</span>
 									</label>
 								</div>
-								<div class="form__row">
+								<div class="form-secondary__row">
 									<label for="phone">
-										<input type="text" class="form__input" placeholder="" id="phone">
-										<span class="form__name">Телефон</span>
+										<input class="form-secondary__input" type="tel" data-phone id="phone" placeholder="">
+										<span class="form-secondary__name">Телефон</span>
 									</label>
 								</div>
-								<div class="form__row">
+								<div class="form-secondary__row">
 									<label for="email">
-										<input type="text" class="form__input" placeholder="" id="email">
-										<span class="form__name">e-mail</span>
+										<input type="text" class="form-secondary__input" placeholder="" id="email">
+										<span class="form-secondary__name">e-mail</span>
 									</label>
 								</div>
 							</div>
@@ -526,36 +526,36 @@
 								*Регистрация занимает от 2 часов. После ее завершения наши менеджеры свяжутся с Вами.
 							</div>
 						</div>
-						<form action="#" class="form form--modal">
-							<div class="form__wrapper">
-								<div class="form__row">
+						<form action="#" class="form-secondary form-secondary--modal">
+							<div class="form-secondary__wrapper">
+								<div class="form-secondary__row">
 									<label for="modal-name">
-										<input type="text" class="form__input" placeholder="" id="modal-name">
-										<span class="form__name">Имя</span>
+										<input type="text" class="form-secondary__input" placeholder="" id="modal-name">
+										<span class="form-secondary__name">Имя</span>
 									</label>
 								</div>
-								<div class="form__row">
+								<div class="form-secondary__row">
 									<label for="form-phone">
-										<input type="text" class="form__input" placeholder="" id="form-phone">
-										<span class="form__name">Телефон</span>
+										<input type="text" class="form-secondary__input" placeholder="" data-phone id="form-phone">
+										<span class="form-secondary__name">Телефон</span>
 									</label>
 								</div>
-								<div class="form__row">
+								<div class="form-secondary__row">
 									<label for="form-email">
-										<input type="text" class="form__input" placeholder="" id="form-email">
-										<span class="form__name">e-mail</span>
+										<input type="text" class="form-secondary__input" placeholder="" id="form-email">
+										<span class="form-secondary__name">e-mail</span>
 									</label>
 								</div>
-								<div class="form__row">
+								<div class="form-secondary__row">
 									<label for="form-password">
-										<input type="password" class="form__input" placeholder="" id="form-password">
-										<span class="form__name">Пароль</span>
+										<input type="password" class="form-secondary__input" placeholder="" id="form-password">
+										<span class="form-secondary__name">Пароль</span>
 									</label>
 								</div>
-								<div class="form__row">
+								<div class="form-secondary__row">
 									<label for="form-password-repeat">
-										<input type="password" class="form__input" placeholder="" id="form-password-repeat">
-										<span class="form__name">Повтор пароля</span>
+										<input type="password" class="form-secondary__input" placeholder="" id="form-password-repeat">
+										<span class="form-secondary__name">Повтор пароля</span>
 									</label>
 								</div>
 							</div>
@@ -655,10 +655,10 @@
 			const swiperHelp = new Swiper('.swiper--help', {
 				loop: true,
 				slidesPerView: 'auto',
-				// autoplay: {
-				// 	delay: 2000,
-				// 	disableOnInteraction: false,
-				// },
+				autoplay: {
+					delay: 2000,
+					disableOnInteraction: false,
+				},
 				effect: 'fade',
 				fadeEffect: {
 					crossFade: true
@@ -697,6 +697,52 @@
 				},
 			},
 		});
+
+
+		function formMask() {
+			function formatPhone(value) {
+				let digits = value.replace(/\D/g, "").replace(/^7/, "");
+				digits = digits.slice(0, 10);
+
+				let result = "+7";
+				if (digits.length > 0) result += " (" + digits.slice(0, 3);
+				if (digits.length >= 3) result += ") " + digits.slice(3, 6);
+				if (digits.length >= 6) result += "-" + digits.slice(6, 8);
+				if (digits.length >= 8) result += "-" + digits.slice(8, 10);
+
+				return result;
+			}
+
+			document.querySelectorAll("[data-phone]").forEach((input) => {
+				input.addEventListener("keydown", function (e) {
+					const isBackspace = e.key === "Backspace";
+					const raw = input.value.replace(/\D/g, "");
+
+					if (isBackspace && raw.length > 1) {
+						e.preventDefault();
+						const newRaw = raw.slice(0, -1);
+						input.value = formatPhone(newRaw);
+					}
+				});
+
+				input.addEventListener("input", function () {
+					const raw = input.value.replace(/\D/g, "");
+					if (raw.length === 1 && raw !== "7") {
+						input.value = "+7 (";
+						return;
+					}
+					input.value = formatPhone(raw);
+				});
+
+				input.addEventListener("focus", function () {
+					if (input.value === "") {
+						input.value = "+7 (";
+					}
+				});
+			});
+
+		}
+		formMask();
 	</script>
 </body>
 
